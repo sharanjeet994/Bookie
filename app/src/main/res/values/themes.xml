@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Bookie" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#650909</item>
+        <item name="colorPrimaryVariant">#650909</item>
+        <item name="colorOnPrimary">#650909</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#C16E26</item>
+        <item name="colorSecondaryVariant">#C16E26</item>
+        <item name="colorOnSecondary">#C16E26</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
