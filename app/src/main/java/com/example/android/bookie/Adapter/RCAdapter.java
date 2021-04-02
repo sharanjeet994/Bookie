@@ -1,4 +1,4 @@
-package com.example.android.bookie;
+package com.example.android.bookie.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.android.bookie.BookDetail;
+import com.example.android.bookie.R;
+import com.example.android.bookie.Model.ReadersChoice;
 
 import java.util.ArrayList;
 
@@ -70,7 +73,7 @@ public class RCAdapter extends RecyclerView.Adapter<RCAdapter.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext,BookDetail.class);
+                Intent intent = new Intent(mContext, BookDetail.class);
                 intent.putExtra("name",readersChoiceArrayList.get(position).getName());
                 intent.putExtra("image",readersChoiceArrayList.get(position).getImageUrl());
                 intent.putExtra("author",readersChoiceArrayList.get(position).getAuthor());

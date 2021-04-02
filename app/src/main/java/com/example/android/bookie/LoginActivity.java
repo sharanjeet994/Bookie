@@ -130,7 +130,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         progressBar.setVisibility(View.GONE);
 
                         //redirect to user profile
-                        startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
+                        startActivity(new Intent(LoginActivity.this, CatalogActivity.class));
                     }
                     else{
                         user.sendEmailVerification();

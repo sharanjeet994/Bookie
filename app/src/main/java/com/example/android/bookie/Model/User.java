@@ -1,4 +1,4 @@
-package com.example.android.bookie;
+package com.example.android.bookie.Model;
 
 public class User {
 

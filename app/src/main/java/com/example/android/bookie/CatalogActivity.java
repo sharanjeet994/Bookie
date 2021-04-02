@@ -15,6 +15,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.bookie.Adapter.RCAdapter;
+import com.example.android.bookie.Adapter.RecyclerAdapter;
+import com.example.android.bookie.Model.ReadersChoice;
+import com.example.android.bookie.Model.TopSellers;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

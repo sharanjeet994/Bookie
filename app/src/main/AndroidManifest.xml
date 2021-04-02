@@ -6,24 +6,29 @@
 
     <application
         android:allowBackup="true"
+        android:focusable="true"
         android:icon="@drawable/bookie"
         android:label="@string/app_name"
-        android:focusable="true"
         android:roundIcon="@drawable/path_1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bookie">
-        <activity android:name=".OrdersList"></activity>
+        <activity android:name=".SplashScreen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".OrdersList" />
         <activity android:name=".BookDetail" />
         <activity android:name=".CatalogActivity" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data

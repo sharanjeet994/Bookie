@@ -1,4 +1,4 @@
-package com.example.android.bookie;
+package com.example.android.bookie.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,9 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.android.bookie.BookDetail;
+import com.example.android.bookie.R;
+import com.example.android.bookie.Model.TopSellers;
 
 import java.util.ArrayList;
 
@@ -80,7 +83,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(mContext,BookDetail.class);
+                Intent intent = new Intent(mContext, BookDetail.class);
                 intent.putExtra("name",topSellersArrayList.get(position).getName());
                 intent.putExtra("image",topSellersArrayList.get(position).getImageUrl());
                 intent.putExtra("author",topSellersArrayList.get(position).getAuthor());

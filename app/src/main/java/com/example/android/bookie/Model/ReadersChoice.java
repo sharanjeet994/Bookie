@@ -1,6 +1,6 @@
-package com.example.android.bookie;
+package com.example.android.bookie.Model;
 
-public class TopSellers {
+public class ReadersChoice {
 
     //firebase data receiver
 
@@ -10,10 +10,10 @@ public class TopSellers {
     int price;
     int rating;
 
-    public TopSellers() {
+    public ReadersChoice() {
     }
 
-    public TopSellers(String name,String author, String imageUrl, int price, int rating) {
+    public ReadersChoice(String name,String author, String imageUrl, int price, int rating) {
         this.name = name;
         this.author = author;
         this.imageUrl = imageUrl;
@@ -62,3 +62,4 @@ public class TopSellers {
         this.name = name;
     }
 }
+

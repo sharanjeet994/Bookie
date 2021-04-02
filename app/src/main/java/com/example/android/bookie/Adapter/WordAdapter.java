@@ -1,4 +1,4 @@
-package com.example.android.bookie;
+package com.example.android.bookie.Adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -12,6 +12,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.android.bookie.BookDetail;
+import com.example.android.bookie.OrdersList;
+import com.example.android.bookie.R;
+import com.example.android.bookie.Model.Word;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
