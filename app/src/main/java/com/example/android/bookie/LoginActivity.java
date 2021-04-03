@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private static final String TAG ="Login Activity" ;
     private TextView register,forgotPassword;
-    ;
+
     private EditText editTextEmail,editTextPassword;
     private Button login;
 
