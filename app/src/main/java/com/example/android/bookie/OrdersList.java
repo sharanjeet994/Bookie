@@ -1,9 +1,10 @@
 package com.example.android.bookie;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,9 +22,6 @@ import java.util.ArrayList;
 
 public class OrdersList extends AppCompatActivity {
 
-    Context mContext;
-
-    BookDetail bookDetail;
 
     DatabaseReference databaseCart;
 
@@ -47,15 +45,17 @@ public class OrdersList extends AppCompatActivity {
 
         WordAdapter itemsAdapter = new WordAdapter(OrdersList.this,bookInCart);
         ListView listview = (ListView) findViewById(R.id.list);
+        TextView empty = findViewById(R.id.emptyText);
+        listview.setEmptyView(empty);
         listview.setAdapter(itemsAdapter);
-
-
 
 
         databaseCart.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot cartSnapshot : snapshot.getChildren()){
+
+
 
                     Word word = new Word();
                     word.setImage(cartSnapshot.child("BookDetails").child("image").getValue().toString());
@@ -64,11 +64,12 @@ public class OrdersList extends AppCompatActivity {
                     word.setPrice(Integer.parseInt(cartSnapshot.child("BookDetails").child("price").getValue().toString()));
 
                     bookInCart.add(word);
+                    itemsAdapter.notifyDataSetChanged();
                 }
 
                 WordAdapter itemsAdapter = new WordAdapter(OrdersList.this,bookInCart);
                 ListView listview = (ListView) findViewById(R.id.list);
-                listview.setAdapter(itemsAdapter);
+                listview.setAdapter((ListAdapter) itemsAdapter);
 
             }
 
@@ -83,11 +84,5 @@ public class OrdersList extends AppCompatActivity {
     }
 
 
-
-
-    public Context getContext(){
-
-        return mContext;
-    }
 
     }

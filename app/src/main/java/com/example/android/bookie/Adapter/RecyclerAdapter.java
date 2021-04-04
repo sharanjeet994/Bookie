@@ -89,6 +89,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 intent.putExtra("author",topSellersArrayList.get(position).getAuthor());
                 intent.putExtra("price",topSellersArrayList.get(position).getPrice());
                 intent.putExtra("rating",topSellersArrayList.get(position).getRating());
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                 mContext.startActivity(intent);
 

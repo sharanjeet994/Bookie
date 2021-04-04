@@ -79,7 +79,7 @@ public class RCAdapter extends RecyclerView.Adapter<RCAdapter.ViewHolder> {
                 intent.putExtra("author",readersChoiceArrayList.get(position).getAuthor());
                 intent.putExtra("price",readersChoiceArrayList.get(position).getPrice());
                 intent.putExtra("rating",readersChoiceArrayList.get(position).getRating());
-
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
             }
         });
